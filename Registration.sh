@@ -41,7 +41,7 @@ read password
 count=`echo ${#password}`
 if [[ $count -ge 8 ]]
 then
-	if [[ $(echo "$password" | awk '/[a-z]/ && /[A-Z]/ && /[0-9]/') ]]
+	if [[ $(echo "$password" | awk '/[a-z]/ && /[A-Z]/ && /[0-9]/ && /[[:punct:]]/') ]]
 	then
 		echo "Valid"
 	else
