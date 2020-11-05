@@ -15,3 +15,13 @@ then
 else
     echo "Invalid"
 fi
+
+echo "Enter Mail Id:"
+read mailId
+email_pattern="^[a-zA-Z]{5}[0-9a-zA-Z\.\_\-]*\@[a-z]*\.(com|co|in)$";
+if [[ $mailId =~ $email_pattern ]]
+then
+        echo "valid"
+else
+        echo "invalid"
+fi
