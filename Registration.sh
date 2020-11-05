@@ -25,3 +25,14 @@ then
 else
         echo "invalid"
 fi
+
+echo "Enter Mobile No:"
+read MobNo
+mobile_number_pattern="^[0-9]{2} [0-9]{10}$";
+if [[ $MobNo =~ $mobile_number_pattern ]]
+then
+        echo "valid"
+else
+        echo "invalid"
+fi
+
