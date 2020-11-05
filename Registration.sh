@@ -38,11 +38,10 @@ fi
 
 echo "Enter your password"
 read password
-password_pattern="[a-zA-z]$"
 count=`echo ${#password}`
 if [[ $count -ge 8 ]]
 then
-	if [[ $password =~ $password_pattern ]]
+	if [[ $(echo "$password" | awk '/[a-z]/ && /[A-Z]/') ]]
 	then
 		echo "Valid"
 	else
