@@ -36,3 +36,18 @@ else
         echo "invalid"
 fi
 
+echo "Enter your password"
+read password
+password_pattern="[a-zA-z]$"
+count=`echo ${#password}`
+if [[ $count -ge 8 ]]
+then
+	if [[ $password =~ $password_pattern ]]
+	then
+		echo "Valid"
+	else
+		echo "Invalid"
+	fi
+else
+	echo "Enter minimum 8 character"
+fi
